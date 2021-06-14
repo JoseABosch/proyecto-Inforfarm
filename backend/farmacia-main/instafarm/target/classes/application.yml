@@ -1,0 +1,21 @@
+spring: 
+ h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+       web-allow-others: true
+ datasource:
+    url: jdbc:h2:file:C://h2/farmacia/h2;AUTO_SERVER=TRUE
+    username: sa
+    password: sa
+    driverClassName: org.h2.Driver  
+ jpa:
+    database-platform: org.hibernate.dialect.H2Dialect     
+    generate-ddl: true
+    hibernate:  
+      ddl-auto: update
+ main:
+    allow-bean-definition-overriding: true         
+server:
+  port: 8080
